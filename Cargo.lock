@@ -745,6 +745,7 @@ dependencies = [
 [[package]]
 name = "mpc-manager"
 version = "0.1.0"
+source = "git+https://github.com/coinfabrik/mpc-manager.git#c28e5e3f4ea1555ac914f51ddb39bfa452f4b49e"
 dependencies = [
  "anyhow",
  "serde",
@@ -1148,7 +1149,7 @@ dependencies = [
 [[package]]
 name = "round-based"
 version = "0.1.7"
-source = "git+https://github.com/mpc-framework/round-based-protocol.git?branch=wasm-fixes#cb447558bbbcc2d8691cb471bfcc9ac35a006ee8"
+source = "git+https://github.com/coinfabrik/round-based-protocol.git?branch=wasm-fixes#4da9597c4bcea283a3636c4a66bb710a51ffb3d3"
 dependencies = [
  "async-stream",
  "futures",
