@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Hello wasm-pack!</title>
+</head>
+
+<body>
+  <h1>Demo multi-party-ecdsa</h1>
+
+  <h2>Connection</h2>
+  <div style="margin-top: 1rem;">
+    <button id="connect-button">Connect</button>
+  </div>
+
+  <h2>Group</h2>
+  <span id="group-label"></span>
+  <div style="margin-top: 1rem;">
+    <button id="create-group-button">Create group</button>
+  </div>
+  <div style="margin-top: 1rem;">
+    <button id="join-group-button">Join group</button>
+    <input id="join-group-input" size="50" type="text" placeholder="Group ID">
+  </div>
+
+  <h2>Session</h2>
+  <span id="session-label"></span>
+  <div style="margin-top: 1rem;">
+    <button id="create-session-button">Create session</button>
+  </div>
+  <div style="margin-top: 1rem;">
+    <button id="join-session-button">Join session</button>
+    <input id="join-session-input" size="50" type="text" placeholder="Session ID">
+  </div>
+
+  <h2>Keygen</h2>
+  <div style="margin-top: 1rem;">
+    <button id="keygen">Keygen</button>
+    <p id="keygen-output"></p>
+  </div>
+
+  <hr />
+  <h1>AIO Demo</h1>
+
+  <h2>Connection</h2>
+  <div style="margin-top: 1rem;">
+    <button id="aio-connect-button">Connect</button>
+  </div>
+
+  <h2>Keygen</h2>
+  <div style="margin-top: 1rem;">
+    <button id="aio-start-keygen-button">Start</button>
+  </div>
+
+  <h2>Sign</h2>
+  <div style="margin-top: 1rem;">
+    <input id="aio-start-sign-input" size="30" type="text" placeholder="Message in hex">
+    <button id="aio-start-sign-button">Start</button>
+  </div>
+
+  <noscript>This page contains webassembly and javascript content, please enable javascript in your browser.</noscript>
+  <script src="./bootstrap.js"></script>
+</body>
+
+</html>
