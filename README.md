@@ -185,6 +185,11 @@ const signature = await multiPartyEcdsa.sign(
 
 And that's it! You have now signed your first message with a multi party threshold scheme.
 
+## Contributing
+
+If you'd like to contribute to the library, please open an issue or submit a pull request. We welcome any contributions, including bug fixes, feature requests, and documentation improvements.
+
+
 ## Acknowledgments
 
 This project is based on the following projects:
