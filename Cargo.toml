@@ -1,8 +1,11 @@
 [package]
 name = "wasm-multi-party-ecdsa"
+description = "A wasm library for multi-party ecdsa"
 version = "0.1.0"
 authors = ["aon <21188659+aon@users.noreply.github.com>"]
 edition = "2021"
+repository = "https://github.com/CoinFabrik/wasm-multi-party-ecdsa"
+license = "GPL-3.0"
 
 [lib]
 crate-type = ["cdylib"]
@@ -20,7 +23,7 @@ js-sys = "0.3.60"
 json-rpc-types = "1.2.0"
 log = "0.4"
 mpc-ecdsa-getrandom-hack = "*"
-mpc-manager = { git = "https://github.com/coinfabrik/mpc-manager.git", default-features = false }
+mpc-manager = { version = "0.1.1", default-features = false }
 multi-party-ecdsa = { git = "https://github.com/ZenGo-X/multi-party-ecdsa", default-features = false }
 rand = { version = "0.6.5", features = ["wasm-bindgen"] }
 round-based = "0.1"

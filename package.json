@@ -1,0 +1,9 @@
+{
+  "name": "wasm-multi-party-ecdsa",
+  "scripts": {
+    "format": "prettier --write 'pkg/**/*.{js,ts,json}'"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8"
+  }
+}

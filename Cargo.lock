@@ -744,8 +744,9 @@ dependencies = [
 
 [[package]]
 name = "mpc-manager"
-version = "0.1.0"
-source = "git+https://github.com/coinfabrik/mpc-manager.git#c28e5e3f4ea1555ac914f51ddb39bfa452f4b49e"
+version = "0.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f95a6d2435a215614dbfd8cdf55f26df3341114bae51a6738b7d14b43c4d0ce7"
 dependencies = [
  "anyhow",
  "serde",

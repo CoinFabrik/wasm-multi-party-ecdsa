@@ -1,6 +1,12 @@
+# Rust
 /target
 **/*.rs.bk
 bin/
 pkg/
 wasm-pack.log
 .DS_Store
+
+# NPM
+/node_modules
+npm-debug.log
+yarn-error.log
