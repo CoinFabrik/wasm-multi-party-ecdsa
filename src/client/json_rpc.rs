@@ -75,7 +75,6 @@ impl JsonRpc {
                     return;
                 }
                 let _ = notification_tx_c.send(message); // Ignores no receiver error
-                return;
             }
         });
         transport.set_onmessage(onmessage_callback.as_ref().unchecked_ref());

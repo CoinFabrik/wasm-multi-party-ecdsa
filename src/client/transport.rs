@@ -9,6 +9,7 @@ pub enum TransportError {
     CreatingWebsocket(String, String),
     #[error("sending message failed due to `{0}`")]
     SendingMessage(String),
+    #[allow(dead_code)]
     #[error("cannot add event listener with callback due to `{0}`")]
     AddingEventListener(String),
 }
@@ -36,16 +37,19 @@ impl Transport {
     }
 
     /// Sets closure to execute when the websocket errors out.
+    #[allow(dead_code)]
     pub fn set_onerror(&self, function: &Function) {
         self.websocket.set_onerror(Some(function));
     }
 
     /// Sets closure to execute when the websocket is closed.
+    #[allow(dead_code)]
     pub fn set_onclose(&self, function: &Function) {
         self.websocket.set_onclose(Some(function));
     }
 
     /// Sends a new message to the websocket.
+    #[allow(dead_code)]
     pub fn send(&self, message: &str) -> Result<()> {
         self.websocket.send_with_str(message).map_err(|e| {
             TransportError::SendingMessage(e.as_string().unwrap_or("unknown error".into()))
@@ -59,6 +63,7 @@ impl Transport {
     }
 
     /// Adds a new event listener with callback.
+    #[allow(dead_code)]
     pub fn add_event_listener_with_callback(&self, event: &str, callback: &Function) -> Result<()> {
         self.websocket
             .add_event_listener_with_callback(event, callback)
