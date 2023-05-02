@@ -26,11 +26,14 @@ jobs:
             target
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
 
-      - name: Update rust
+      - name: Update Rust
         run: rustup update
 
-      - name: Install rust nightly
-        run: rustup install nightly
+      - name: Install Rust nightly
+        run: rustup install nightly --profile minimal
+
+      - name: Install Rust components
+        run: rustup component add rust-src --toolchain nightly
 
       - name: Run test
         run: cargo test --all --all-features
@@ -44,8 +47,11 @@ jobs:
       - name: Update Rust
         run: rustup update
 
-      - name: Install rust nightly
-        run: rustup install nightly
+      - name: Install Rust nightly
+        run: rustup install nightly --toolchain nightly
+
+      - name: Install Rust components
+        run: rustup component add rustfmt --toolchain nightly
 
       - name: Run cargo fmt
         run: cargo fmt --all -- --check
@@ -60,11 +66,11 @@ jobs:
       - name: Update Rust
         run: rustup update
 
-      - name: Install rust nightly
-        run: rustup install nightly
+      - name: Install Rust nightly
+        run: rustup install nightly --toolchain nightly
 
-      - name: Install clippy
-        run: rustup component add clippy --toolchain nightly
+      - name: Install Rust components
+        run: rustup component add rust-src clippy --toolchain nightly
 
       - name: Run clippy
         run: cargo clippy -- -D warnings
