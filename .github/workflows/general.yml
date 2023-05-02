@@ -30,7 +30,7 @@ jobs:
         run: rustup update
 
       - name: Install rust nightly
-        run: rustup install nightly --profile minimal
+        run: rustup install nightly
 
       - name: Run test
         run: cargo test --all --all-features
@@ -45,7 +45,7 @@ jobs:
         run: rustup update
 
       - name: Install rust nightly
-        run: rustup install nightly --profile minimal
+        run: rustup install nightly
 
       - name: Run cargo fmt
         run: cargo fmt --all -- --check
@@ -61,7 +61,7 @@ jobs:
         run: rustup update
 
       - name: Install rust nightly
-        run: rustup install nightly --profile minimal
+        run: rustup install nightly
 
       - name: Install clippy
         run: rustup component add clippy --toolchain nightly
