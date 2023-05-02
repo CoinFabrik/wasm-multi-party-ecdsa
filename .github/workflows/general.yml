@@ -48,7 +48,7 @@ jobs:
         run: rustup update
 
       - name: Install Rust nightly
-        run: rustup install nightly --toolchain nightly
+        run: rustup install nightly --profile minimal
 
       - name: Install Rust components
         run: rustup component add rustfmt --toolchain nightly
@@ -67,7 +67,7 @@ jobs:
         run: rustup update
 
       - name: Install Rust nightly
-        run: rustup install nightly --toolchain nightly
+        run: rustup install nightly --profile minimal
 
       - name: Install Rust components
         run: rustup component add rust-src clippy --toolchain nightly
