@@ -26,31 +26,23 @@ jobs:
             target
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
 
-      - name: Install toolchain
-        uses: actions-rs/toolchain@v1
-        with:
-          profile: minimal
-          override: true
+      - name: Update rust
+        run: rustup update
 
-      - name: Run cargo test
-        uses: actions-rs/cargo@v1
-        with:
-          command: test
+      - name: Run test
+        run: cargo test --all --all-features
 
   fmt:
     name: Rustfmt
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions-rs/toolchain@v1
-        with:
-          profile: minimal
-          components: rustfmt
-          override: true
-      - uses: actions-rs/cargo@v1
-        with:
-          command: fmt
-          args: --all -- --check
+
+      - name: Update Rust
+        run: rustup update
+
+      - name: Run cargo fmt
+        run: cargo fmt --all -- --check
 
   clippy:
     name: Clippy
@@ -59,14 +51,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install toolchain
-        uses: actions-rs/toolchain@v1
-        with:
-          components: clippy
-          override: true
+      - name: Update Rust
+        run: rustup update
 
       - name: Run clippy
-        uses: actions-rs/clippy-check@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          args: -- -D warnings
+        run: cargo clippy -- -D warnings
