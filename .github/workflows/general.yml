@@ -37,8 +37,11 @@ jobs:
           rustup component add rust-src --toolchain nightly
           rustup component add rust-std --toolchain nightly --target wasm32-unknown-unknown
 
+      - name: Install wasm-pack
+        run: cargo install wasm-pack
+
       - name: Run test
-        run: cargo test --all --all-features
+        run: wasm-pack test --node
 
   fmt:
     name: Rustfmt
