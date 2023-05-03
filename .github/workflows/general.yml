@@ -33,7 +33,7 @@ jobs:
         run: rustup install nightly --profile minimal
 
       - name: Install Rust components
-        run: rustup component add rust-src --toolchain nightly
+        run: rustup component add rust-std rust-src --toolchain nightly
 
       - name: Run test
         run: cargo test --all --all-features
@@ -81,7 +81,7 @@ jobs:
         run: rustup install nightly --profile minimal
 
       - name: Install Rust components
-        run: rustup component add rust-src clippy --toolchain nightly
+        run: rustup component add clippy rust-std rust-src --toolchain nightly
 
       - name: Run clippy
         run: cargo clippy --target wasm32-unknown-unknown -- -D warnings
