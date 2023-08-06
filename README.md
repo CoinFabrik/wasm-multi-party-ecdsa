@@ -2,7 +2,7 @@
 
 This library provides a secure implementation of the Elliptic Curve Digital Signature Algorithm (ECDSA) in WebAssembly (WASM) implemented entirely in Rust. It enables parties to securely generate keys and sign messages using a threshold scheme without revealing their private keys. This solution outperforms previous hybrid approaches and is the first pure-wasm MPC solution.
 
-[CoinFabrik](https://www.coinfabrik.com/) is the solutions company behind this implementation.
+[CoinFabrik](https://www.coinfabrik.com/) is the Web3 solutions company behind this implementation.
 
 ## Usage
 
